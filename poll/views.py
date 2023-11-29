@@ -40,7 +40,7 @@ def vote(request, poll_id):
         if selected_option == 'option1':
             poll.option_one_count += 1
         elif selected_option == 'option2':
-            poll.option_three_count += 1
+            poll.option_two_count += 1
         elif selected_option == 'option3':
             poll.option_three_count += 1
         else:
