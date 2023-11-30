@@ -16,7 +16,8 @@
                     <strong>{{ poll.question }}</strong>
                     <span class="pull-right">
                         <a href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Vote</a> &nbsp;
-                        <a href="{% url 'results' poll.id %}" class="btn btn-default btn-xs">View Results</a> &nbsp;
+                        <a href="{% url 'results' poll.id %}" class="btn btn-default btn-xs">View Results</a>
+                        <a href="{% url 'delete' poll.id %}" class="btn btn-danger btn-xs">Delete</a>
                     </span>
                 </li>
                 {% endfor %}

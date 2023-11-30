@@ -50,3 +50,15 @@ def vote(request, poll_id):
 
     context = {'poll': poll}
     return render(request, 'vote.html', context)
+
+
+def delete_poll(request, poll_id):
+    item = Poll.objects.get(pk=poll_id)
+
+    if request.method == 'POST':
+        item.delete()
+        return redirect('/')
+
+    context = {'item': item}
+
+    return render(request, 'delete.html', context)
